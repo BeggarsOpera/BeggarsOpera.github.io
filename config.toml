@@ -1,0 +1,47 @@
+title = 'Beggars Opera, The Digital Edition'
+baseURL = 'https://BeggarsOpera.github.io/'
+languageCode = 'en-us'
+theme = "researcher"
+disableKinds = ["taxonomy", "term"]
+enableEmoji = true
+math = false          # enable KaTeX (https://katex.org/) globally
+googleAnalytics = ""  # add your tracking id
+
+[params]
+  author = "By Alex Wermer-Colan"
+  description = "Test Hugo site for Beggars Opera digital edition"
+  favicon = "favicon.ico"  # path to a .ico to use as favicon
+  logo = ""  # url or path to a logo to put in the header
+  [params.footer]
+    text = "Alex Wermer-Colan"
+    url = "https://github.com/ojroques/hugo-researcher"
+  [params.style]  # appearance options (can be omitted)
+    fontFamily = "Inconsolata"
+    pageWidth = "750px"
+    avatarSize = "90px"
+    colorBlack = "#222222"
+    colorRed = "#dc3545"
+  [[params.socialIcons]]
+    icon = "fas fa-envelope"
+    title = "E-mail"
+    url = "mailto:alwermercolan@gmail.com"
+
+[permalinks]
+  "/" = "/:filename"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 1
+  [[menu.main]]
+    name = "TEI"
+    url = "/tei"
+    weight = 2
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact"
+    weight = 3
+
+[markup.goldmark.renderer]
+  unsafe = true  # allow raw HTML in markdown files
