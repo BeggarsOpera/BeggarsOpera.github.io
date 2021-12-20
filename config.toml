@@ -34,6 +34,10 @@ custom_js = ["js/CETEI.js"]
 
 [menu]
   [[menu.main]]
+     name = "CustomHTML"
+     url = "CustomHTML/index.html"
+     weight = 50
+  [[menu.main]]
     name = "About"
     url = "/about"
     weight = 1
