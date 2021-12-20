@@ -2,8 +2,6 @@
 title = "Home"
 +++
 
-## Bio
+# About
 
-{{< figure class="avatar" src="/avatar.jpg" alt="avatar">}}
-
-I am a writer, editor, translator, and teacher.
+Test site for Beggars Opera
