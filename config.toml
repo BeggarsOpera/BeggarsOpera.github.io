@@ -7,6 +7,9 @@ enableEmoji = true
 math = false          # enable KaTeX (https://katex.org/) globally
 googleAnalytics = ""  # add your tracking id
 
+custom_css = ["css/custom.css"]
+custom_js = ["js/custom.js"]
+
 [params]
   author = "By Alex Wermer-Colan"
   description = "Test Hugo site for Beggars Opera digital edition"
