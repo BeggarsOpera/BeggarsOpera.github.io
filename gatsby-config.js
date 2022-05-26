@@ -1,4 +1,4 @@
-const basePath = "hawc2.github.io/gatsby_bo"
+const basePath = "BeggarsOpera.github.io"
 const title = "The Beggars Opera"
 const htmlTitle = "The Beggars Opera"
 
