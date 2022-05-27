@@ -1,3 +1,3 @@
-# Beggars-Opera Gatsby Site
+# Beggars Opera
 
-This repo is for building a minimal edition website for the Beggars Opera using Raff Vigilante's Gatsby template for CeTEIcean
+This repo is a test site for developing a Gatsby framework for a multimodal digital edition of the Beggars Opera using CeTEIcean and Verovio.
