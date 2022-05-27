@@ -1,4 +1,4 @@
-const basePath = "BeggarsOpera.github.io"
+const basePath = "/"
 const title = "The Beggars Opera"
 const htmlTitle = "The Beggars Opera"
 
