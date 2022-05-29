@@ -27,7 +27,7 @@ export interface Fac {
   }
 }
 
-const EditionCeteicean = ({pageContext}: Props) => {
+const EditionCeteicean_bo = ({pageContext}: Props) => {
 
   const queryData = useStaticQuery(graphql`
   query generalAndGeneral {
@@ -60,4 +60,9 @@ const facs: Fac[] = queryData.facs.nodes
 
 }
 
-export default EditionCeteicean
+
+export default EditionCeteicean_bo
+
+
+
+

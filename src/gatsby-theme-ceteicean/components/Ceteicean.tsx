@@ -51,7 +51,7 @@ const facs: Fac[] = queryData.facs.nodes
 
   return(
     <Layout location="example">
-      <SEO title="Edition" />
+      <SEO title="Example" />
       <Container component="main" maxWidth="md">
         <Ceteicean pageContext={pageContext} routes={routes} />
       </Container>

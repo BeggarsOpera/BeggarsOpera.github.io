@@ -7,8 +7,8 @@ module.exports = {
   siteMetadata: {
     issue: {
       full: "The Beggars Opera",
-      short: "1st Edition",
-      path: "path"
+      short: "Home",
+      path: "/"
     },
     doi: '10.55520/FAKE',
     group_order: 1,
@@ -17,6 +17,15 @@ module.exports = {
     description: `A Scholarly Edition of. ${title}. Edited by Steve Newman, Fred Rowland, Alex Wermer-Colan.`,
     authors: [
       {
+        "first": "Steve",
+        "middle": "",
+        "last": "Newman",
+        "affiliations": [
+          "Temple University"
+        ],
+        orcid:"0000-0000-0000-0000"
+      },
+      {
         "first": "Henry",
         "middle": "A",
         "last": "Wermer-Colan",
@@ -24,9 +33,18 @@ module.exports = {
           "Temple University"
         ],
         orcid:"0000-0000-0000-0000"
+      },
+      {
+        "first": "Fred",
+        "middle": "",
+        "last": "Rowland",
+        "affiliations": [
+          "Temple University"
+        ],
+        orcid:"0000-0000-0000-0000"
       }
     ],
-    repository: "https://gitlab.com/scholarly-editing/se-microedition-template",
+    repository: "https://github.com/BeggarsOpera/BeggarsOpera.github.io",
     menuLinks: [
       {
         name: 'introduction',
@@ -41,7 +59,7 @@ module.exports = {
         link: '/example'
       },
       {
-        name: 'beggarsopera',
+        name: 'beggars opera',
         link: '/embedSVG_bo1'
       },
     ]
@@ -86,7 +104,7 @@ module.exports = {
         name: `Scholarly Editing`,
         short_name: `Scholarly Editing`,
         start_url: `/`,
-        icon: `src/images/se-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/se-icon.png`,
       },
     },
   ],

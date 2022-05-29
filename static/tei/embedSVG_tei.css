@@ -1,13 +1,6 @@
 
 
- img {
 
-    display: grid;
-    max-width: 880px;
-    background-color: #ffffff;
-    margin: auto;
-    align-content: center;
-}
 
 p.break {
     font-family: Arial, Helvetica, sans-serif;
@@ -42,13 +35,13 @@ tei-closer > tei-signed {
     text-align: right;
 }
 
-tei-div1, tei-div2 {
+tei-div1, tei-div2, tei-div3 {
     display: block;
 }
 
 
 
-tei-div1[type = introduction] > tei-head {
+tei-div1 > tei-head {
     display: block;
     font-size: 140%;
     font-weight: bold;
@@ -59,45 +52,37 @@ tei-div1[type = introduction] > tei-head {
 }
 
 
-tei-div1[type = act] > tei-head {
+
+
+
+tei-div2 > tei-head {
     display: block;
     font-size: 140%;
     font-weight: bold;
-    padding-top: 3em;
-    padding-bottom: 1em;
     text-align: center;
-
-}
-
-
-tei-div2[type = scene] > tei-head {
-    display: block;
-    font-size: 140%;
-    font-weight: bold;
-    text-align: left;
     padding-top: 1em;
     padding-bottom: 1em;
 
 }
 
 
-tei-div1[type = act] {
+tei-div1 {
+    
     border-bottom: 1px solid #999;
     padding-bottom: 1em;
 }
 
-
-tei-div1[type = introduction] {
-    border-bottom: 1px solid #999;
-    padding-bottom: 1em;
+#SCORES2 {
+    border-bottom: none;
+    padding-bottom: 0;
+    
 }
 
 
-tei-div1[type = dramatis] {
+tei-div2[scores_by_act] {
     border-bottom: 1px solid #999;
     padding-bottom: 1em;
 }
-
 
 
 tei-div[type = dedication] > tei-lg {
@@ -190,7 +175,7 @@ tei-p {
 
 
 tei-set {
-
+    
     display: none;
 }
 
@@ -219,7 +204,7 @@ tei-tei {
     /*   font-family: Georgia, 'Times New Roman', Times, serif; */
     font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
     font-size: 16pt;
-
+    
 
 }
 tei-text {
@@ -236,12 +221,50 @@ tei-titlepage {
 
 }
 
+tei-trailer {
+    
+    display: block;
+    text-align: center;
+    
+}
+
+#sba1 {
+    border-bottom: 1px solid #999;
+    padding-bottom: 2em;
+    
+}
+
+
+#sba2 {
+    border-bottom: 1px solid #999;
+    padding-bottom: 2em;
+    
+}
+
+
+
+tei-opener {
+    
+    display: block;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+
 
 
 /* Media Queries */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width : 600px) {
+
+    img {
+        
+        display: none;
+       
+    }
+
+
 
     tei-text {
         display: block;
@@ -270,6 +293,24 @@ tei-titlepage {
         padding-top: 3em;
         padding-bottom: 1em;
         text-align: center;
+    }
+    
+    tei-div1[type=musical_scores] > tei-head {
+        
+        display: none;
+    }
+    
+    tei-div2[type=scores_by_act] > tei-head {
+        
+        display: none;
+    }
+    
+    
+    tei-div3[type = musical_score] > tei-head {
+        
+        display: none;
+        
+
     }
 
 
@@ -341,14 +382,17 @@ tei-titlepage {
 }
 
 
-
-
-
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width : 600px) {
 
-
+    img {
+        
+        display: grid;
+        max-width: 90%; 
+        background-color: #ffffff;
+        margin: auto;
+        align-content: center;
+    }
 
 
     tei-text {
@@ -379,6 +423,39 @@ tei-titlepage {
         padding-top: 3em;
         padding-bottom: 1em;
         text-align: center;
+    }
+    
+    
+    tei-div1[type = musical_scores] > tei-head {
+            display: block;
+            font-size: 140%;
+            font-weight: bold;
+            padding-top: 3em;
+            padding-bottom: 1em;
+            text-align: center;
+        
+        }
+    
+ /*    tei-div2[type = scores_by_act] > tei-head {
+        display: block;
+        font-size: 110%;
+        font-weight: normal;
+        padding-top: 2em;
+        padding-bottom: 1em;
+        text-align: center;
+
+    }
+
+   */  
+    
+    tei-div3[type = musical_score] > tei-head {
+        display: block;
+        font-size: 110%;
+        font-weight: normal;
+        padding-top: 2em;
+        padding-bottom: 1em;
+        text-align: center;
+
     }
 
 
@@ -450,8 +527,20 @@ tei-titlepage {
 
 
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width : 992px) {
+/* Large devices (laptops/desktops, 992px and up) 
+ @media only screen and (min-width : 1025px) { */
+
+@media only screen and (min-width : 992px) { 
+
+     img {
+        
+        display: grid;
+        max-width: 90%; 
+        background-color: #ffffff;
+        margin: auto;
+        align-content: center;
+    }
+
 
 
     tei-text {
@@ -481,12 +570,22 @@ tei-titlepage {
         padding-top: 3em;
         padding-bottom: 1em;
         text-align: center;
-
+    
     }
-
-    tei-div2[type = musical_score] > tei-head {
+    
+        tei-div1[type = musical_scores] > tei-head {
+            display: block;
+            font-size: 140%;
+            font-weight: bold;
+            padding-top: 3em;
+            padding-bottom: 1em;
+            text-align: center;
+        
+        }
+    
+  /*    tei-div2[type = scores_by_act] > tei-head {
         display: block;
-        font-size: 120%;
+        font-size: 110%;
         font-weight: normal;
         padding-top: 2em;
         padding-bottom: 1em;
@@ -494,15 +593,17 @@ tei-titlepage {
 
     }
 
-    tei-div1[type = musical_scores] > tei-head {
-            display: block;
-            font-size: 140%;
-            font-weight: bold;
-            padding-top: 3em;
-            padding-bottom: 1em;
-            text-align: center;
+  */  
+    
+    tei-div3[type = musical_score] > tei-head {
+        display: block;
+        font-size: 110%;
+        font-weight: normal;
+        padding-top: 2em;
+        padding-bottom: 1em;
+        text-align: center;
 
-        }
+    }
 
     tei-floatingText {
         display: block;
@@ -518,7 +619,7 @@ tei-titlepage {
         line-height: 2.0;
 
     }
-
+    
     #FT_2,
     #FT_8,
     #FT_9,
@@ -563,7 +664,7 @@ tei-titlepage {
         width: 90%;
 
     }
-
+    
 
 
 }
@@ -571,7 +672,19 @@ tei-titlepage {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
- tei-text {
+
+    img {
+       
+       display: grid;
+       max-width: 90%;
+       background-color: #ffffff;
+       margin: auto;
+       align-content: center;
+       
+   }
+
+
+    tei-text {
         display: block;
         width: 50%;
         margin: auto;
@@ -598,12 +711,34 @@ tei-titlepage {
         padding-top: 3em;
         padding-bottom: 1em;
         text-align: center;
-
+        
         }
-
-    tei-div2[type = musical_score] > tei-head {
+        
+      tei-div1[type = musical_scores] > tei-head {
+            display: block;
+            font-size: 140%;
+            font-weight: bold;
+            padding-top: 3em;
+            padding-bottom: 1em;
+            text-align: center;
+        
+        }
+    
+ /*     tei-div2[type = scores_by_act] > tei-head {
         display: block;
-        font-size: 120%;
+        font-size: 110%;
+        font-weight: normal;
+        padding-top: 2em;
+        padding-bottom: 1em;
+        text-align: center;
+
+    }
+
+   */ 
+    
+    tei-div3[type = musical_score] > tei-head {
+        display: block;
+        font-size: 110%;
         font-weight: normal;
         padding-top: 2em;
         padding-bottom: 1em;
@@ -625,7 +760,7 @@ tei-titlepage {
         line-height: 2.0;
 
     }
-
+    
     #FT_2,
     #FT_8,
     #FT_9,
@@ -670,7 +805,8 @@ tei-titlepage {
         width: 90%;
 
     }
-
+    
 
 
 }
+

@@ -49,7 +49,7 @@ const Download = ({open, close, repository}: Props) => {
         <DialogContentText component="div" id="alert-dialog-slide-description">
           <p>This edition is encoded according to the <a href="https://tei-c.org/">Text Encoding Initiative</a> (TEI) P5 Guidelines.</p>
           <p>The open source code for this edition is avilable on <a href={repository}>
-              GitLab</a>.</p>
+              Github</a>.</p>
           <List dense>
             <ListItem>
               <ListItemIcon>
@@ -61,7 +61,7 @@ const Download = ({open, close, repository}: Props) => {
                 <IconButton
                   edge="end"
                   aria-label="download"
-                  onClick={() => navigate('/data/edition.xml')}
+                  onClick={() => navigate('/data/embedSVG_bo1.xml')}
                   size="large">
                   <GetApp />
                 </IconButton>

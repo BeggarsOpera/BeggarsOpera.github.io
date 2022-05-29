@@ -72,7 +72,7 @@ const Header = ({ location, menuLinks, doi, issue }: Props) => (
           <Logo>
             <Link to="/">
               <LogoBkgr />
-              <img src={titleImg} alt="Scholarly Editing Logo" width={200} />
+              <img src={titleImg} alt="John Gay Portrait" width={200} />
             </Link>
           </Logo>
         </Container>

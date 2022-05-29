@@ -5,6 +5,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 async function makeIntroduction(createPage, reporter, graphql) {
   const component = require.resolve(`./src/templates/introduction.tsx`)
+  
 
   const result = await graphql(`
     query {
