@@ -86,7 +86,7 @@ export default function Introduction({pageContext}: Props) {
 
   const authors = site.siteMetadata.authors.map((a: Author) => (
     <React.Fragment key={a.last}>
-      {a.first} {a.middle || ''} {a.last}, {a.affiliations.join(', ')}
+      {a.first}{a.middle ? ` ${a.middle}` : ''} {a.last}, {a.affiliations.join(', ')}
       {a.orcid &&
         <a href={`https://orcid.org/${a.orcid}`} className={classes.orcid}>
           <GatsbyImage image={orcid.nodes[0].childImageSharp.gatsbyImageData} alt="ORCID logo"/>
@@ -97,24 +97,20 @@ export default function Introduction({pageContext}: Props) {
   ))
 
   return (
-    <Layout location="background">
-      <SEO title="Background" />
+    <Layout location="intro">
+      <SEO title="Introduction" />
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Container component="main" maxWidth="md">
-          <Typography variant="h3" component="h2" gutterBottom={false} dangerouslySetInnerHTML={
+          <Typography variant="h3" component="h2" gutterBottom sx={{marginBottom: '0.5rem'}} dangerouslySetInnerHTML={
             {__html: site.siteMetadata.htmlTitle}
           } />
           {pageContext.title ?
-            <Typography variant="h4" component="h3" gutterBottom={false} dangerouslySetInnerHTML={
+            <Typography variant="h4" component="h3" gutterBottom sx={{marginBottom: '1.5rem'}} dangerouslySetInnerHTML={
               {__html: pageContext.title}
             } />
           : ''}
-          <Typography variant="h5" component="h4" gutterBottom={false} >
-              Edited by {site.siteMetadata.authors.length > 1 ? <br/> : ''}
-              {authors}
-          </Typography>
           <Typography
             className={classes.Content}
             variant="body1"

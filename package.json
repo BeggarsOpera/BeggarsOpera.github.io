@@ -26,6 +26,9 @@
     "react-helmet": "^6.1.0",
     "react-teirouter": "^3.0.0"
   },
+  "resolutions": {
+    "graphql-compose": "9.1.0"
+  },
   "devDependencies": {
     "@types/react": "^18.0.7",
     "@types/react-dom": "^18.0.0",

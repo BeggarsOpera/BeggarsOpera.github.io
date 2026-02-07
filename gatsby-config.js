@@ -7,59 +7,51 @@ module.exports = {
   siteMetadata: {
     issue: {
       full: "The Beggars Opera",
-      short: "Home",
+      short: "1st Edition",
       path: "/"
     },
-    doi: '10.55520/FAKE',
+    doi: '10.55520/6ZH06EW2',
     group_order: 1,
     title,
     htmlTitle,
-    description: `A Scholarly Edition of. ${title}. Edited by Steve Newman, Fred Rowland, Alex Wermer-Colan.`,
+    description: `A Scholarly Edition of ${title}. Edited by Steve Newman, Fred Rowland, and Alex Wermer-Colan.`,
     authors: [
       {
         "first": "Steve",
-        "middle": "",
         "last": "Newman",
         "affiliations": [
           "Temple University"
-        ],
-        orcid:"0000-0000-0000-0000"
+        ]
       },
       {
-        "first": "Henry",
-        "middle": "A",
+        "first": "Fred",
+        "last": "Rowland",
+        "affiliations": [
+          "Temple University"
+        ]
+      },
+      {
+        "first": "Alex",
         "last": "Wermer-Colan",
         "affiliations": [
           "Temple University"
         ],
-        orcid:"0000-0000-0000-0000"
-      },
-      {
-        "first": "Fred",
         "middle": "",
-        "last": "Rowland",
-        "affiliations": [
-          "Temple University"
-        ],
-        orcid:"0000-0000-0000-0000"
+        "orcid": ""
       }
     ],
     repository: "https://github.com/BeggarsOpera/BeggarsOpera.github.io",
     menuLinks: [
       {
-        name: 'introduction',
+        name: 'Introduction',
         link: '/'
       },
       {
-        name: 'background',
+        name: 'Background',
         link: '/background'
       },
       {
-        name: 'edition',
-        link: '/example'
-      },
-      {
-        name: 'beggars opera',
+        name: "Beggar's Opera",
         link: '/embedSVG_bo1'
       },
     ]

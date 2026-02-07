@@ -1,4 +1,5 @@
 import React from "react"
+import { navigate } from "gatsby"
 import Grid from "@mui/material/Grid"
 import Container from "@mui/material/Container"
 import Button from "@mui/material/Button"
@@ -56,7 +57,7 @@ const Info = ({doi, issue}: Props) => (
             color="default"
             size="large"
             sx={styles.navBtn}
-            onClick={() => location.href = issue.path}
+            onClick={() => navigate(issue.path)}
           >
             <ChevronLeftIcon/> {issue.short}
           </Button>

@@ -55,7 +55,7 @@ const Layout = ({ location, children }: Props) => {
   const {repository, title, menuLinks, doi, issue} = data.site.siteMetadata
 
   let footer = <Footer repository={repository}/>
-  if (location === "example") {
+  if (location === "example" || location === "embedSVG_bo1") {
     footer = <EditionFooter repository={repository}>{footer}</EditionFooter>
   }
 

@@ -31,7 +31,8 @@ interface Props {
 
 const Banner = styled.div(() => ({
   backgroundImage: `url(${banner})`,
-  backgroundPositionY: "-588px",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
   filter: "brightness(1.5) opacity(80%)",
   paddingBottom: "1.45rem",
 }))
@@ -72,7 +73,7 @@ const Header = ({ location, menuLinks, doi, issue }: Props) => (
           <Logo>
             <Link to="/">
               <LogoBkgr />
-              <img src={titleImg} alt="John Gay Portrait" width={200} />
+              <img src={titleImg} alt="Scholarly Editing Logo" width={200} />
             </Link>
           </Logo>
         </Container>

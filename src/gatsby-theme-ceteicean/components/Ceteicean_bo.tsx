@@ -10,6 +10,7 @@ import Pb from "./Pb"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import Container from "@mui/material/Container"
+import "../../embedSVG_tei.css"
 
 interface Props {
   pageContext: {
@@ -27,7 +28,7 @@ export interface Fac {
   }
 }
 
-const EditionCeteicean_bo = ({pageContext}: Props) => {
+const EditionCeteicean = ({pageContext}: Props) => {
 
   const queryData = useStaticQuery(graphql`
   query generalAndGeneral {
@@ -51,7 +52,7 @@ const facs: Fac[] = queryData.facs.nodes
 
   return(
     <Layout location="embedSVG_bo1">
-      <SEO title="Beggars Opera" />
+      <SEO title="The Beggar's Opera" />
       <Container component="main" maxWidth="md">
         <Ceteicean pageContext={pageContext} routes={routes} />
       </Container>
@@ -60,9 +61,4 @@ const facs: Fac[] = queryData.facs.nodes
 
 }
 
-
-export default EditionCeteicean_bo
-
-
-
-
+export default EditionCeteicean

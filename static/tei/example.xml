@@ -18,15 +18,15 @@
  <text>
    <body>
    <pb/>
-   <head>Beggars Opera fascimile pages</head>
+   <head>Example</head>
      <div>
       <pb n="1" facs="p1"/>
       <p>
-         1st Edition
+         Page with image
       </p>
       <pb n="2"/>
       <p>
-         2nd Edition Score
+         Page without image
       </p>
      </div>
      </body>
