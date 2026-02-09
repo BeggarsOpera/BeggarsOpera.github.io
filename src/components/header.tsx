@@ -1,8 +1,7 @@
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import React from "react"
 import Container from "@mui/material/Container"
 
-import Info from "./info"
 import Nav from "./nav"
 
 import titleImg from "../images/se-title.png"
@@ -21,6 +20,7 @@ interface Props {
   siteTitle: string
   menuLinks: Links[]
   doi: string
+  wideHeader?: boolean
   issue: {
     short: string
     path: string
@@ -54,32 +54,22 @@ const Logo = styled.div(() => ({
   },
 }))
 
-const LogoBkgr = styled.span(() => ({
-  height: "109px",
-  position: "absolute",
-  backgroundColor: "#fff",
-  width: "200px",
-  top: "18px",
-  zIndex: -1,
-  filter: "opacity(.5)",
-}))
+// LogoBkgr removed - no longer needed without Info component
 
 // Main Component
 
-const Header = ({ location, menuLinks, doi, issue }: Props) => (
+const Header = ({ location, menuLinks, doi, issue, wideHeader }: Props) => (
     <Wrapper>
       <Banner>
-        <Container maxWidth="md">
+        <Container maxWidth={wideHeader ? false : "md"} disableGutters={!!wideHeader}>
           <Logo>
-            <Link to="/">
-              <LogoBkgr />
+            <Link to={withPrefix("/")}>
               <img src={titleImg} alt="Scholarly Editing Logo" width={200} />
             </Link>
           </Logo>
         </Container>
       </Banner>
-      <Info doi={doi} issue={issue}/>
-      <Nav location={location} menuLinks={menuLinks} />
+      <Nav location={location} menuLinks={menuLinks} wideHeader={wideHeader} />
     </Wrapper>
 )
 

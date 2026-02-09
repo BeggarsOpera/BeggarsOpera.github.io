@@ -1,5 +1,5 @@
 import React from "react"
-import { navigate } from "gatsby"
+import { navigate, withPrefix } from "gatsby"
 import Grid from "@mui/material/Grid"
 import Container from "@mui/material/Container"
 import Button from "@mui/material/Button"
@@ -15,6 +15,7 @@ interface Props {
     path: string
   }
   doi: string
+  wideHeader?: boolean
 }
 
 const Wrapper = styled.div(() => ({
@@ -48,16 +49,16 @@ const styles = {
   }
 }
 
-const Info = ({doi, issue}: Props) => (
+const Info = ({doi, issue, wideHeader}: Props) => (
   <Wrapper>
-    <Container maxWidth="md">
+    <Container maxWidth={wideHeader ? false : "md"} disableGutters={!!wideHeader}>
       <Grid container={true}>
         <Grid item={true} xs={4}>
           <Button
             color="default"
             size="large"
             sx={styles.navBtn}
-            onClick={() => navigate(issue.path)}
+            onClick={() => navigate(withPrefix(issue.path))}
           >
             <ChevronLeftIcon/> {issue.short}
           </Button>

@@ -1,0 +1,361 @@
+/* Custom styles for The Beggar's Opera TEI edition */
+
+/* ===== Page Layout & Typography ===== */
+
+/* Note: html and body styles removed to prevent conflicts with Gatsby/MUI layout.
+   These styles are only appropriate for standalone TEI Boilerplate pages.
+   The merged TEI view uses the Gatsby Container component for width control. */
+
+a:link, a:visited, a:active {
+  color: #006699;
+}
+
+a:hover {
+  color: #004d73;
+}
+
+/* ===== TEI Header ===== */
+
+teiHeader {
+  display: block;
+  margin: 0 0 2em;
+  padding: 1.5em;
+  border-bottom: 2px solid #d4c9b0;
+  background-color: #f5f0e8;
+  border-radius: 4px;
+  font-size: 90%;
+  line-height: 1.5;
+}
+
+titleStmt > tei-title {
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 160%;
+  font-weight: bold;
+  color: #2c2416;
+}
+
+titleStmt > author {
+  font-family: Georgia, serif;
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+
+/* ===== Title Page ===== */
+
+titlePage {
+  display: block;
+  text-align: center;
+  padding: 3em 1em;
+  margin: 2em 0;
+  border-bottom: 2px solid #d4c9b0;
+}
+
+titlePart[type="main"] {
+  display: block;
+  font-size: 2.2em;
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+  margin-bottom: 0.5em;
+  color: #2c2416;
+}
+
+titlePart[type="sub"] {
+  display: block;
+  font-size: 1.1em;
+  font-style: italic;
+  margin: 0.5em 0;
+  color: #555;
+}
+
+byline {
+  display: block;
+  font-size: 1.1em;
+  margin: 1.5em 0;
+}
+
+docAuthor {
+  font-style: italic;
+}
+
+epigraph {
+  display: block;
+  margin: 1.5em auto;
+  max-width: 70%;
+  font-style: italic;
+  color: #555;
+}
+
+docImprint {
+  display: block;
+  margin-top: 2em;
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* ===== Dramatis Personae ===== */
+
+performance {
+  display: block;
+  margin: 2em 0;
+  padding-bottom: 2em;
+  border-bottom: 2px solid #d4c9b0;
+}
+
+castList {
+  display: block;
+  margin: 1em auto;
+  max-width: 85%;
+}
+
+castList > head {
+  display: block;
+  text-align: center;
+  font-size: 1.4em;
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5em;
+  color: #2c2416;
+}
+
+castGroup {
+  display: block;
+  margin: 1.5em 0;
+}
+
+castGroup > head {
+  display: block;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #d4c9b0;
+  color: #2c2416;
+}
+
+castGroup castGroup {
+  margin-left: 2em;
+}
+
+castGroup castGroup > head {
+  font-size: 1em;
+  font-weight: normal;
+  font-style: italic;
+  font-variant: normal;
+  border-bottom: none;
+  color: #555;
+}
+
+castItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.2em 0;
+  list-style-type: none;
+}
+
+role {
+  font-weight: bold;
+  flex: 1;
+}
+
+actor {
+  color: #555;
+  text-align: right;
+  flex: 1;
+}
+
+/* ===== Act Headings ===== */
+
+div2[type="act"] > head,
+div2[type="introduction"] > p:first-child {
+  display: block;
+  text-align: center;
+  font-size: 1.8em;
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: 0.12em;
+  margin: 2em 0 0.5em;
+  padding: 0.8em 0;
+  border-top: 2px solid #d4c9b0;
+  border-bottom: 1px solid #d4c9b0;
+  color: #2c2416;
+}
+
+/* ===== Scene Headings ===== */
+
+div3[type="scene"] > head {
+  display: block;
+  text-align: center;
+  font-size: 1.3em;
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: 0.08em;
+  margin: 2.5em 0 0.3em;
+  color: #2c2416;
+}
+
+/* ===== Stage Directions ===== */
+
+stage {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin: 1em 0;
+  font-size: 0.95em;
+}
+
+/* ===== Speeches ===== */
+
+sp {
+  display: block;
+  margin: 1em 0;
+}
+
+speaker {
+  display: block;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2em;
+  color: #2c2416;
+  font-size: 0.95em;
+}
+
+speaker hi[rend="italics"] {
+  font-style: normal;
+}
+
+sp > p {
+  margin: 0.3em 0 0.3em 1.5em;
+  text-indent: 0;
+}
+
+/* ===== Songs / Airs ===== */
+
+floatingText {
+  display: block;
+  margin: 1.5em 0;
+  padding: 1.2em 1.5em;
+  background-color: #f5f0e8;
+  border-left: 3px solid #b8a88a;
+  border-radius: 0 4px 4px 0;
+}
+
+floatingText body {
+  display: block;
+}
+
+div[type="song"] {
+  display: block;
+}
+
+div[type="song"] > head {
+  display: block;
+  font-style: italic;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 0.8em;
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+floatingText l {
+  display: block;
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+floatingText stage {
+  font-size: 0.85em;
+  margin: 0.5em 0;
+  text-align: left;
+  padding-left: 1.5em;
+}
+
+/* ===== Line Groups ===== */
+
+lg {
+  display: block;
+  margin: 1em 0;
+}
+
+/* ===== Notes ===== */
+
+note {
+  display: block;
+  margin: 1em 2em;
+  padding: 0.8em 1.2em;
+  background: #f5f0e8;
+  border: 1px solid #d4c9b0;
+  border-radius: 4px;
+  font-size: 90%;
+  width: auto;
+  box-shadow: none;
+}
+
+/* ===== Highlighted text ===== */
+
+hi[rend="italics"],
+hi[rend="italic"] {
+  font-style: italic;
+}
+
+/* ===== Page Breaks ===== */
+
+pb {
+  display: block;
+  text-align: right;
+  color: #b8a88a;
+  font-size: 0.8em;
+  margin: 1.5em 0;
+  padding-top: 0.5em;
+  border-top: 1px dotted #d4c9b0;
+}
+
+/* ===== TEI Toolbox ===== */
+
+#teibpToolbox {
+  background: #f5f0e8;
+  border: 1px solid #d4c9b0;
+  font-family: Georgia, serif;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Footer ===== */
+
+footer {
+  border-top: 1px solid #d4c9b0;
+  color: #666;
+  font-size: 0.85em;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 700px) {
+  html {
+    padding: 1em;
+    font-size: 12pt;
+  }
+
+  titlePart[type="main"] {
+    font-size: 1.6em;
+  }
+
+  castItem {
+    flex-direction: column;
+  }
+
+  actor {
+    text-align: left;
+    margin-left: 1em;
+  }
+
+  sp > p {
+    margin-left: 0.5em;
+  }
+}

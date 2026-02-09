@@ -3,7 +3,7 @@
  img {
 
     display: grid;
-    max-width: 880px;
+    max-width: 55rem;
     background-color: #ffffff;
     margin: auto;
     align-content: center;
@@ -49,8 +49,8 @@ tei-div1[type = introduction] > tei-head {
     display: block;
     font-size: 140%;
     font-weight: bold;
-    padding-top: 3em;
-    padding-bottom: 1em;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
     text-align: center;
 
 }
@@ -60,8 +60,8 @@ tei-div1[type = act] > tei-head {
     display: block;
     font-size: 150%;
     font-weight: bold;
-    padding-top: 2.5em;
-    padding-bottom: 1em;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -73,38 +73,38 @@ tei-div2[type = scene] > tei-head {
     font-size: 130%;
     font-weight: bold;
     text-align: left;
-    padding-top: 1.5em;
-    padding-bottom: 0.75em;
+    padding-top: 1.5rem;
+    padding-bottom: 0.75rem;
     border-bottom: 1px solid #ccc;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 
 tei-div1[type = act] {
     border-bottom: 2px solid #999;
-    padding-bottom: 2em;
-    margin-bottom: 1em;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 
 tei-div1[type = introduction] {
     border-bottom: 1px solid #999;
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
 }
 
 
 tei-div1[type = dramatis] {
     border-bottom: 2px solid #999;
-    padding-bottom: 2em;
-    margin-bottom: 1em;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 tei-div1[type = dramatis] > tei-head {
     display: block;
     font-size: 150%;
     font-weight: bold;
-    padding-top: 2em;
-    padding-bottom: 1em;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -113,18 +113,18 @@ tei-div1[type = dramatis] > tei-head {
 tei-table {
     display: block;
     width: 100%;
-    margin: 1em auto;
+    margin: 1rem auto;
 }
 
 tei-row {
     display: flex;
     flex-wrap: nowrap;
-    padding: 0.15em 0;
+    padding: 0.15rem 0;
 }
 
 tei-cell {
     display: block;
-    padding: 0.2em 0.5em;
+    padding: 0.2rem 0.5rem;
 }
 
 /* Character name column: right-align so the nbsp padding gets clipped on the left */
@@ -133,7 +133,7 @@ tei-cell:first-child {
     text-align: right;
     white-space: nowrap;
     overflow: hidden;
-    padding-right: 1em;
+    padding-right: 1rem;
 }
 
 /* Hide empty middle cells */
@@ -160,15 +160,15 @@ tei-cell[cols] {
 tei-cell[role = label] {
     font-weight: bold;
     font-size: 1.15em;
-    padding-top: 1.25em;
-    padding-bottom: 0.25em;
+    padding-top: 1.25rem;
+    padding-bottom: 0.25rem;
 }
 
 /* Subgroup headers like "Macheath's Gang" and "Women of the Town" */
 tei-cell[cols]:not([role = label]) {
     font-size: 0.95em;
-    padding-top: 0.75em;
-    padding-bottom: 0.25em;
+    padding-top: 0.75rem;
+    padding-bottom: 0.25rem;
 }
 
 
@@ -190,7 +190,7 @@ tei-docauthor > tei-name {
 
 tei-docimprint {
     display: block;
-    margin-top: 10em;
+    margin-top: 10rem;
     text-align: center;
 }
 
@@ -205,7 +205,7 @@ tei-doctitle > tei-titlepart[type = main] {
 
 tei-doctitle > tei-titlepart[type = subtitle] {
     font-size: 2em;
-    padding: .5em;
+    padding: 0.5rem;
 }
 tei-emph[rend = bold] {
     font-weight: bold;
@@ -213,8 +213,8 @@ tei-emph[rend = bold] {
 
 tei-figure {
     display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
@@ -241,7 +241,7 @@ tei-l {
     display: block;
     font-style: italic;
     line-height: 1.6;
-    padding-left: 2em;
+    padding-left: 2rem;
 }
 
 tei-list[type = simple] {
@@ -255,8 +255,8 @@ tei-list[type = simple] > tei-item {
 tei-p {
     display: block;
     line-height: 1.8;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     text-align: justify;
 }
 
@@ -269,8 +269,8 @@ tei-set {
 
 tei-sp {
     display: block;
-    margin-bottom: 1.25em;
-    padding-bottom: 0.5em;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
     border-bottom: 1px solid #eee;
 }
 
@@ -279,16 +279,16 @@ tei-speaker {
     font-weight: bold;
     font-variant: small-caps;
     font-size: 1.05em;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.25rem;
 }
 
 tei-stage {
     display: block;
     font-style: italic;
     color: #555;
-    margin-top: 0.75em;
-    margin-bottom: 0.75em;
-    padding-left: 1.5em;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
 }
 
 
@@ -304,7 +304,7 @@ tei-text {
     display: block;
     width: 100%;
     margin: auto;
-    padding: 1.5em;
+    padding: 1.5rem;
     border: 1px solid #ddd;
     border-radius: 4px;
     background-color: #fafafa;
@@ -313,8 +313,8 @@ tei-text {
 tei-titlepage {
     display: block;
     text-align: center;
-    padding: 2em 0;
-    margin-bottom: 2em;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
     border-bottom: 2px solid #999;
 }
 
@@ -329,7 +329,7 @@ tei-titlepage {
         display: block;
         width: 100%;
         margin: auto;
-        padding: 1em;
+        padding: 1rem;
         border: 1px solid #ddd;
         border-radius: 4px;
         background-color: #fafafa;
@@ -337,8 +337,8 @@ tei-titlepage {
 
     tei-table {
         display: block;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         font-size: .7em;
         width: 100%;
     }
@@ -347,8 +347,8 @@ tei-titlepage {
         display: block;
         font-size: 1em;
         font-weight: bold;
-        padding-top: 3em;
-        padding-bottom: 1em;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
         text-align: center;
     }
 
@@ -359,12 +359,12 @@ tei-titlepage {
         font-size: 60%;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 1em;
-        padding-right: 1em;
-        margin-top: .75em;
-        margin-bottom: .75em;
-        padding-top: .75em;
-        padding-bottom: .75em;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
         font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
         text-align: left;
         line-height: 2.0;
@@ -402,14 +402,14 @@ tei-titlepage {
     #FT_69 {
         display: block;
         font-size: 60%;
-        margin-left: 3em;
+        margin-left: 3rem;
         margin-right: auto;
-        padding-left: 1em;
-        padding-right: 1em;
-        margin-top: .75em;
-        margin-bottom: .75em;
-        padding-top: .75em;
-        padding-bottom: .75em;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
         font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
         text-align: left;
         line-height: 2.0;
@@ -432,7 +432,7 @@ tei-titlepage {
         display: block;
         width: 100%;
         margin: auto;
-        padding: 1.5em;
+        padding: 1.5rem;
         border: 1px solid #ddd;
         border-radius: 4px;
         background-color: #fafafa;
@@ -441,8 +441,8 @@ tei-titlepage {
 
     tei-table {
         display: block;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         font-size: .85em;
         width: 100%;
     }
@@ -451,8 +451,8 @@ tei-titlepage {
         display: block;
         font-size: 1em;
         font-weight: bold;
-        padding-top: 3em;
-        padding-bottom: 1em;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
         text-align: center;
     }
 
@@ -460,14 +460,14 @@ tei-titlepage {
     tei-floatingText {
         display: block;
         font-size: 80%;
-        margin-left: 5em;
+        margin-left: 5rem;
         margin-right: auto;
-        padding-left: 1em;
-        padding-right: 1em;
-        margin-top: .75em;
-        margin-bottom: .75em;
-        padding-top: .75em;
-        padding-bottom: .75em;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
         font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
         text-align: left;
         line-height: 2.0;
@@ -505,14 +505,14 @@ tei-titlepage {
     #FT_69 {
         display: block;
         font-size: 80%;
-        margin-left: 4em;
+        margin-left: 4rem;
         margin-right: auto;
-        padding-left: 1em;
-        padding-right: 1em;
-        margin-top: .75em;
-        margin-bottom: .75em;
-        padding-top: .75em;
-        padding-bottom: 1.5em;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+        padding-top: 0.75rem;
+        padding-bottom: 1.5rem;
         font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
         text-align: left;
         line-height: 2.0;
@@ -533,7 +533,7 @@ tei-titlepage {
         display: block;
         width: 100%;
         margin: auto;
-        padding: 2em;
+        padding: 2rem;
         border: 1px solid #ddd;
         border-radius: 4px;
         background-color: #fafafa;
@@ -541,8 +541,8 @@ tei-titlepage {
 
     tei-table {
         display: block;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         font-size: 1em;
         width: 100%;
     }
@@ -551,8 +551,8 @@ tei-titlepage {
         display: block;
         font-size: 140%;
         font-weight: bold;
-        padding-top: 3em;
-        padding-bottom: 1em;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
         text-align: center;
 
     }
@@ -561,8 +561,8 @@ tei-titlepage {
         display: block;
         font-size: 120%;
         font-weight: normal;
-        padding-top: 2em;
-        padding-bottom: 1em;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
         text-align: center;
 
     }
@@ -571,8 +571,8 @@ tei-titlepage {
             display: block;
             font-size: 140%;
             font-weight: bold;
-            padding-top: 3em;
-            padding-bottom: 1em;
+            padding-top: 3rem;
+            padding-bottom: 1rem;
             text-align: center;
 
         }
@@ -580,12 +580,12 @@ tei-titlepage {
     tei-floatingText {
         display: block;
         font-size: 110%;
-        margin-left: 4em;
-        padding-left: 1em;
-        margin-top: .75em;
-        margin-bottom: .75em;
-        padding-top: .75em;
-        padding-bottom: .75em;
+        margin-left: 4rem;
+        padding-left: 1rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
         font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
         text-align: left;
         line-height: 2.0;
@@ -622,14 +622,14 @@ tei-titlepage {
     #FT_69 {
         display: block;
         font-size: 110%;
-        margin-left: 4em;
+        margin-left: 4rem;
         margin-right: auto;
-        padding-left: 1em;
-        padding-right: 1em;
-        margin-top: .75em;
-        margin-bottom: .75em;
-        padding-top: .75em;
-        padding-bottom: 1.5em;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+        padding-top: 0.75rem;
+        padding-bottom: 1.5rem;
         font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
         text-align: left;
         line-height: 2.0;
@@ -648,7 +648,7 @@ tei-titlepage {
         display: block;
         width: 100%;
         margin: auto;
-        padding: 2em;
+        padding: 2rem;
         border: 1px solid #ddd;
         border-radius: 4px;
         background-color: #fafafa;
@@ -656,8 +656,8 @@ tei-titlepage {
 
     tei-table {
         display: block;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         font-size: 1em;
         width: 100%;
     }
@@ -666,8 +666,8 @@ tei-titlepage {
         display: block;
         font-size: 140%;
         font-weight: bold;
-        padding-top: 3em;
-        padding-bottom: 1em;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
         text-align: center;
 
         }
@@ -676,8 +676,8 @@ tei-titlepage {
         display: block;
         font-size: 120%;
         font-weight: normal;
-        padding-top: 2em;
-        padding-bottom: 1em;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
         text-align: center;
 
     }
@@ -685,12 +685,12 @@ tei-titlepage {
     tei-floatingText {
         display: block;
         font-size: 110%;
-        margin-left: 4em;
-        padding-left: 1em;
-        margin-top: .75em;
-        margin-bottom: .75em;
-        padding-top: .75em;
-        padding-bottom: .75em;
+        margin-left: 4rem;
+        padding-left: 1rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
         font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
         text-align: left;
         line-height: 2.0;
@@ -727,14 +727,14 @@ tei-titlepage {
     #FT_69 {
         display: block;
         font-size: 110%;
-        margin-left: 4em;
+        margin-left: 4rem;
         margin-right: auto;
-        padding-left: 1em;
-        padding-right: 1em;
-        margin-top: .75em;
-        margin-bottom: .75em;
-        padding-top: .75em;
-        padding-bottom: 1.5em;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+        padding-top: 0.75rem;
+        padding-bottom: 1.5rem;
         font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
         text-align: left;
         line-height: 2.0;

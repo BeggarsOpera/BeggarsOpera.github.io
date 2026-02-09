@@ -13,7 +13,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Close, Code, FolderOpen, GetApp } from "@mui/icons-material"
-import { navigate } from 'gatsby'
+import { navigate, withPrefix } from 'gatsby'
 
 interface Props {
   open: boolean
@@ -61,7 +61,7 @@ const Download = ({open, close, repository}: Props) => {
                 <IconButton
                   edge="end"
                   aria-label="download"
-                  onClick={() => navigate('/data/edition.xml')}
+                  onClick={() => navigate(withPrefix('/data/edition.xml'))}
                   size="large">
                   <GetApp />
                 </IconButton>
@@ -77,7 +77,7 @@ const Download = ({open, close, repository}: Props) => {
                 <IconButton
                   edge="end"
                   aria-label="download"
-                  onClick={() => navigate('/edition.odd')}
+                  onClick={() => navigate(withPrefix('/edition.odd'))}
                   size="large">
                   <GetApp />
                 </IconButton>
@@ -93,7 +93,7 @@ const Download = ({open, close, repository}: Props) => {
                 <IconButton
                   edge="end"
                   aria-label="download"
-                  onClick={() => navigate('/edition.rng')}
+                  onClick={() => navigate(withPrefix('/edition.rng'))}
                   size="large">
                   <GetApp />
                 </IconButton>
@@ -109,7 +109,7 @@ const Download = ({open, close, repository}: Props) => {
                 <IconButton
                   edge="end"
                   aria-label="download"
-                  onClick={() => navigate('/edition.zip')}
+                  onClick={() => navigate(withPrefix('/edition.zip'))}
                   size="large">
                   <GetApp />
                 </IconButton>

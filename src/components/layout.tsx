@@ -21,6 +21,7 @@ type Children = JSX.Element | JSX.Element[]
 interface Props {
   location?: string
   children?: Children
+  wideHeader?: boolean
 }
 
 const Main = styled.div(() => ({
@@ -31,7 +32,7 @@ const Main = styled.div(() => ({
   }
 }))
 
-const Layout = ({ location, children }: Props) => {
+const Layout = ({ location, children, wideHeader }: Props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -55,7 +56,7 @@ const Layout = ({ location, children }: Props) => {
   const {repository, title, menuLinks, doi, issue} = data.site.siteMetadata
 
   let footer = <Footer repository={repository}/>
-  if (location === "example" || location === "embedSVG_bo1") {
+  if (location === "example" || location === "ceteicean") {
     footer = <EditionFooter repository={repository}>{footer}</EditionFooter>
   }
 
@@ -69,6 +70,7 @@ const Layout = ({ location, children }: Props) => {
           siteTitle={title}
           menuLinks={menuLinks}
           doi={doi}
+          wideHeader={wideHeader}
         />
         <Main>{children}</Main>
         {footer}

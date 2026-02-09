@@ -107,11 +107,11 @@ export default function Introduction({pageContext}: Props) {
             {__html: site.siteMetadata.htmlTitle}
           } />
           {pageContext.title ?
-            <Typography variant="h4" component="h3" gutterBottom sx={{marginBottom: '0.5rem'}} dangerouslySetInnerHTML={
+            <Typography variant="h4" component="h3" gutterBottom sx={{marginBottom: '1.5rem'}} dangerouslySetInnerHTML={
               {__html: pageContext.title}
             } />
           : ''}
-          <Typography variant="h5" component="h4" gutterBottom sx={{marginBottom: '1.5rem', color: '#666'}} >
+          <Typography variant="h5" component="h4" gutterBottom sx={{marginBottom: '2rem', color: '#666'}} >
               Edited by {site.siteMetadata.authors.length > 1 ? <br/> : ''}
               {authors}
           </Typography>

@@ -34,7 +34,9 @@
     "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
-    "eslint": "^8.14.0",
+    "ajv": "8.17.1",
+    "ajv-keywords": "5.1.0",
+    "eslint": "7.32.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-prettier": "^4.0.0",
     "gh-pages": "^4.0.0",
@@ -43,12 +45,12 @@
   },
   "scripts": {
     "build-local": "gatsby build",
-    "build": "cross-env BASEPATH=/ gatsby build --prefix-paths",
-    "build-deploy": "cross-env BASEPATH=/issues/CHANGEME gatsby build --prefix-paths && yarn metadata",
+    "build": "gatsby build",
+    "build-deploy": "gatsby build && yarn metadata",
     "clean": "gatsby clean",
     "develop": "gatsby develop",
     "metadata": "node scripts/metadata.js",
     "doi": "node scripts/doi.js",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages"
+    "deploy": "gatsby build && gh-pages -d public -b gh-pages"
   }
 }

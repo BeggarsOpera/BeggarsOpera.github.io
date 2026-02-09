@@ -1,5 +1,5 @@
 import React from "react"
-import { navigate } from "gatsby"
+import { navigate, withPrefix } from "gatsby"
 import Grid from "@mui/material/Grid"
 import Container from "@mui/material/Container"
 import Button from "@mui/material/Button"
@@ -14,6 +14,7 @@ interface Links {
 interface Props {
   location: string
   menuLinks: Links[]
+  wideHeader?: boolean
 }
 
 const styles = {
@@ -34,13 +35,14 @@ const styles = {
   },
 }
 
-const Layout = ({ location, menuLinks }: Props) => {
+const Layout = ({ location, menuLinks, wideHeader }: Props) => {
   const isHome = location === "intro"
 
   return (
-    <Container maxWidth="md" sx={styles.nav}>
+    <Container maxWidth={wideHeader ? false : "md"} disableGutters={!!wideHeader} sx={styles.nav}>
       <Grid container={true} component="nav">
         {menuLinks.map(link => {
+          const isStaticLink = link.link.endsWith(".xml") || link.link.startsWith("/teibp/")
           const active = {
             borderBottomColor: (isHome && link.link === "/") || location === link.link.replace(/\/+/, "")
               ? theme.palette.primary.main
@@ -55,7 +57,9 @@ const Layout = ({ location, menuLinks }: Props) => {
                 color="default"
                 size="large"
                 sx={buttonStyle}
-                onClick={() => navigate(link.link)}
+                component={isStaticLink ? "a" : "button"}
+                href={isStaticLink ? withPrefix(link.link) : undefined}
+                onClick={isStaticLink ? undefined : () => navigate(link.link)}
               >
                 {link.name}
               </Button>
