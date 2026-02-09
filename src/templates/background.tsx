@@ -97,8 +97,8 @@ export default function Introduction({pageContext}: Props) {
   ))
 
   return (
-    <Layout location="intro">
-      <SEO title="Introduction" />
+    <Layout location="background">
+      <SEO title="Background" />
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={theme}>
           <CssBaseline />
