@@ -4,7 +4,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 }
 
 async function makeIntroduction(createPage, reporter, graphql) {
-  const component = require.resolve(`./src/templates/introduction.tsx`)
+  const introductionComponent = require.resolve(`./src/templates/introduction.tsx`)
+  const backgroundComponent = require.resolve(`./src/templates/background.tsx`)
 
   const result = await graphql(`
     query {
@@ -26,6 +27,10 @@ async function makeIntroduction(createPage, reporter, graphql) {
     return
   }
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const component = node.frontmatter.path === "/background"
+      ? backgroundComponent
+      : introductionComponent
+
     createPage({
       path: node.frontmatter.path,
       component,
@@ -33,6 +38,6 @@ async function makeIntroduction(createPage, reporter, graphql) {
         html: node.html,
         title: node.frontmatter.title
       }
-    })   
+    })
   })
 }
