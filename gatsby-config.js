@@ -67,10 +67,6 @@ module.exports = {
         link: "/"
       },
       {
-        name: "Background",
-        link: "/background"
-      },
-      {
         name: "CeTEIcean",
         link: "/ceteicean"
       },
