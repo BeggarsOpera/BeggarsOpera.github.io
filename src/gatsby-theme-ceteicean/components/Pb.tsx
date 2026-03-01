@@ -59,12 +59,12 @@ const Pb: PbBehavior = ({teiNode, facs}: TEIProps) => {
     ...styles.ease
   }))
 
-  if (img) {
+  const [expanded, setExpanded] = React.useState(false)
+  const handleChange = (_event: React.SyntheticEvent, isExpanded: boolean) => {
+    setExpanded(isExpanded)
+  }
 
-    const [expanded, setExpanded] = React.useState(false)
-    const handleChange = (event: React.SyntheticEvent, isExpanded: boolean) => {
-      setExpanded(isExpanded)
-    }
+  if (img) {
 
     const background: JSX.Element | undefined = expanded ? undefined : (<BackgroundImage
       image={img.childImageSharp.gatsbyImageData}

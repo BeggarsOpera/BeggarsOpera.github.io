@@ -54,6 +54,10 @@ const Footer = ({repository} : Props) => (
             <a href={repository}>{repository}</a>.
           </p>
           <p style={{margin: "0 0 0.5rem 0"}}>
+            This edition is encoded according to the{" "}
+            <a href="https://tei-c.org/">Text Encoding Initiative</a> (TEI) P5 Guidelines.
+          </p>
+          <p style={{margin: "0 0 0.5rem 0"}}>
             This is a <strong>Micro-Edition</strong> published by Scholarly Editing.
           </p>
           <p style={{margin: 0}}>

@@ -6,8 +6,6 @@ import { ThemeProvider, Theme, StyledEngineProvider } from "@mui/material/styles
 import theme from "../theme"
 import Header from "./header"
 import Footer from "./footer"
-import EditionFooter from "./editionFooter"
-
 import styled from '@emotion/styled'
 
 
@@ -37,12 +35,6 @@ const Layout = ({ location, children, wideHeader }: Props) => {
     query SiteTitleQuery {
       site {
         siteMetadata {
-          title
-          doi
-          issue {
-            short
-            path
-          }
           repository
           menuLinks {
             name
@@ -53,23 +45,17 @@ const Layout = ({ location, children, wideHeader }: Props) => {
     }
   `)
   
-  const {repository, title, menuLinks, doi, issue} = data.site.siteMetadata
+  const {repository, menuLinks} = data.site.siteMetadata
 
-  let footer = <Footer repository={repository}/>
-  if (location === "example" || location === "ceteicean") {
-    footer = <EditionFooter repository={repository}>{footer}</EditionFooter>
-  }
+  const footer = <Footer repository={repository}/>
 
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Header
-          issue={issue}
           location={location || ''}
-          siteTitle={title}
           menuLinks={menuLinks}
-          doi={doi}
           wideHeader={wideHeader}
         />
         <Main>{children}</Main>

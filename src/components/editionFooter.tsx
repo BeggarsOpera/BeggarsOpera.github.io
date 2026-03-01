@@ -25,11 +25,11 @@ interface Props {
 }
 
 const EditionFooter = ({children, repository}: Props) => {
-  const footerRef = React.useRef<HTMLElement>(null)
+  const footerRef = React.useRef<HTMLDivElement>(null)
   const [stopFab, setStopFab] = React.useState(false)
 
   React.useEffect(() => {
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
       const scrollPosition = window.pageYOffset
       const windowSize     = window.innerHeight
       const bodyHeight     = document.body.offsetHeight
@@ -42,12 +42,14 @@ const EditionFooter = ({children, repository}: Props) => {
       } else {
         setStopFab(false)
       }
-    })
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [footerRef])
 
   const [open, setOpen] = React.useState(false)
 
-  return (<div {...{ ref: footerRef } as any}>
+  return (<div ref={footerRef}>
     <Download open={open} close={() => setOpen(false)} repository={repository}/>
     <Fab size="large" color="secondary" aria-label="Show TEI" 
         sx={{

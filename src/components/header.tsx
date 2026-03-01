@@ -17,14 +17,8 @@ interface Links {
 
 interface Props {
   location: string
-  siteTitle: string
   menuLinks: Links[]
-  doi: string
   wideHeader?: boolean
-  issue: {
-    short: string
-    path: string
-  }
 }
 
 // Styled components
@@ -58,7 +52,7 @@ const Logo = styled.div(() => ({
 
 // Main Component
 
-const Header = ({ location, menuLinks, doi, issue, wideHeader }: Props) => (
+const Header = ({ location, menuLinks, wideHeader }: Props) => (
     <Wrapper>
       <Banner>
         <Container maxWidth={wideHeader ? false : "md"} disableGutters={!!wideHeader}>
